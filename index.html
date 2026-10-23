@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>想对你说</title>
+    <title>有些话想告诉你</title>
     <style>
         * {
             margin: 0;
@@ -79,22 +79,21 @@
             "我一直都很喜欢你",
             "希望往后的日子，有你相伴",
             "小宝宝雷馥榕，我是姜锐呐",
-            "谢谢你为我弄的围巾，你像一束光照进我的生活里"
+            "谢谢你为我弄的围巾，你像一束光照进我的生活里",
             "小宝宝我爱你"
         ];
         function showLove(){
-            let text = words[Math.floor(Math.random()*words.length)];
+            let text = words[Math.floor(Math.random() * words.length)];
             document.getElementById("msg").innerText = text;
-            // 飘落爱心
-            for(let i=0;i<12;i++){
+            for(let i = 0; i < 12; i++){
                 setTimeout(()=>{
                     let h = document.createElement('div');
                     h.className = "heart";
                     h.innerText = "♥";
-                    h.style.left = Math.random()*100 + "vw";
+                    h.style.left = Math.random() * 100 + "vw";
                     document.body.appendChild(h);
-                    setTimeout(()=>h.remove(),4000);
-                },i*80)
+                    setTimeout(()=> h.remove(), 4000);
+                }, i * 80)
             }
         }
     </script>
